@@ -1,6 +1,8 @@
 ## NoVPAJpeg
 
-NoVPAJpeg Lilu plugin: A slightly modified version of [NoTouchID](https://github.com/al3xtjames/NoTouchID) that disables the hardware JPEG decoding feature of the AppleVPA framework.
+NoVPAJpeg Lilu plugin: Disables the hardware JPEG decoding feature of the AppleVPA framework that breaks Preview and Quicklook on some systems.
+
+Based (entirely) on [NoTouchID](https://github.com/al3xtjames/NoTouchID)
 
 ### License
 
