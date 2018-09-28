@@ -1,7 +1,8 @@
 //
 //  kern_start.cpp
-//  NoTouchID
+//  NoVPAJpeg
 //
+//  Modified from NoTouchID
 //  Copyright (C) 2018 Alex James (TheRacerMaster). All rights reserved.
 //
 
@@ -10,15 +11,16 @@
 #include <Headers/kern_api.hpp>
 
 // Target framework
-static const char *binPath = "/System/Library/PrivateFrameworks/BiometricKit.framework/Versions/A/BiometricKit";
+
+static const char *binPath = "/System/Library/PrivateFrameworks/AppleVPA.framework/Versions/A/AppleVPA";
 
 // Accompanied processes
 static const char *procList[] {
 	"/System/Library/Frameworks/LocalAuthentication.framework/Support/DaemonUtils.framework/Versions/A/DaemonUtils"
 };
 
-static const uint8_t find[] = "board-id";
-static const uint8_t repl[] = "board-ix";
+static const uint8_t find[] = "jpeg";
+static const uint8_t repl[] = "jpex";
 
 static UserPatcher::BinaryModPatch patch {
 	CPU_TYPE_X86_64,
@@ -43,16 +45,16 @@ static UserPatcher::ProcInfo ADDPR(procInfo)[] {
 
 const size_t ADDPR(procInfoSize) = 1;
 
-static void noBioStart() {
+static void noVpaStart() {
 	lilu.onProcLoad(ADDPR(procInfo), ADDPR(procInfoSize), nullptr, nullptr, ADDPR(binaryMod), ADDPR(binaryModSize));
 }
 
 static const char *bootargOff[] {
-	"-nobiooff"
+	"-novpaoff"
 };
 
 static const char *bootargBeta[] {
-	"-nobiobeta"
+	"-novpabeta"
 };
 
 PluginConfiguration ADDPR(config) {
@@ -65,9 +67,9 @@ PluginConfiguration ADDPR(config) {
 	0,
 	bootargBeta,
 	arrsize(bootargBeta),
-	KernelVersion::HighSierra,
+	KernelVersion::Mojave,
 	KernelVersion::Mojave,
 	[]() {
-		noBioStart();
+		noVpaStart();
 	}
 };

@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C748C271C21952C0024EED2 /* NoTouchID.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoTouchID.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C748C271C21952C0024EED2 /* NoVPAJpeg.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoVPAJpeg.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C748C2C1C21952C0024EED2 /* kern_start.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; usesTabs = 1; };
 		1C748C2E1C21952C0024EED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE405EBA1E49DD7100AA0B3D /* kern_compression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_compression.hpp; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CE405EC81E49DD7B00AA0B3D /* SDK */,
-				1C748C291C21952C0024EED2 /* NoTouchID */,
+				1C748C291C21952C0024EED2 /* NoVPAJpeg */,
 				1C748C281C21952C0024EED2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,18 +69,18 @@
 		1C748C281C21952C0024EED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C748C271C21952C0024EED2 /* NoTouchID.kext */,
+				1C748C271C21952C0024EED2 /* NoVPAJpeg.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1C748C291C21952C0024EED2 /* NoTouchID */ = {
+		1C748C291C21952C0024EED2 /* NoVPAJpeg */ = {
 			isa = PBXGroup;
 			children = (
 				83023F341F37461700850499 /* Sources */,
 				83023F351F37463000850499 /* Supporting Files */,
 			);
-			path = NoTouchID;
+			path = NoVPAJpeg;
 			sourceTree = "<group>";
 		};
 		83023F341F37461700850499 /* Sources */ = {
@@ -152,9 +152,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1C748C261C21952C0024EED2 /* NoTouchID */ = {
+		1C748C261C21952C0024EED2 /* NoVPAJpeg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "NoTouchID" */;
+			buildConfigurationList = 1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "NoVPAJpeg" */;
 			buildPhases = (
 				1C748C221C21952C0024EED2 /* Sources */,
 				1C748C231C21952C0024EED2 /* Frameworks */,
@@ -166,9 +166,9 @@
 			);
 			dependencies = (
 			);
-			name = NoTouchID;
+			name = NoVPAJpeg;
 			productName = CPUFriend;
-			productReference = 1C748C271C21952C0024EED2 /* NoTouchID.kext */;
+			productReference = 1C748C271C21952C0024EED2 /* NoVPAJpeg.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1C748C211C21952C0024EED2 /* Build configuration list for PBXProject "NoTouchID" */;
+			buildConfigurationList = 1C748C211C21952C0024EED2 /* Build configuration list for PBXProject "NoVPAJpeg" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -197,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C748C261C21952C0024EED2 /* NoTouchID */,
+				1C748C261C21952C0024EED2 /* NoVPAJpeg */,
 			);
 		};
 /* End PBXProject section */
@@ -337,12 +337,12 @@
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Lilu.kext/Contents/Resources";
-				INFOPLIST_FILE = "$(SRCROOT)/NoTouchID/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NoVPAJpeg/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lilu.kext/Contents/Resources/Library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULE_NAME = xyz.racermaster.NoTouchID;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
@@ -360,7 +360,7 @@
 					"-fno-asynchronous-unwind-tables",
 				);
 				OTHER_LDFLAGS = "-static";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.racermaster.NoTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJepg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -382,13 +382,13 @@
 					"PRODUCT_NAME=$(PRODUCT_NAME)",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Lilu.kext/Contents/Resources";
-				INFOPLIST_FILE = "$(SRCROOT)/NoTouchID/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NoVPAJpeg/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lilu.kext/Contents/Resources/Library",
 				);
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MODULE_NAME = xyz.racermaster.NoTouchID;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
@@ -406,7 +406,7 @@
 					"-fno-asynchronous-unwind-tables",
 				);
 				OTHER_LDFLAGS = "-static";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.racermaster.NoTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJepg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = kext;
@@ -416,7 +416,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C748C211C21952C0024EED2 /* Build configuration list for PBXProject "NoTouchID" */ = {
+		1C748C211C21952C0024EED2 /* Build configuration list for PBXProject "NoVPAJpeg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C748C2F1C21952C0024EED2 /* Debug */,
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "NoTouchID" */ = {
+		1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "NoVPAJpeg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C748C321C21952C0024EED2 /* Debug */,
