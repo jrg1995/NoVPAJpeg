@@ -360,7 +360,7 @@
 					"-fno-asynchronous-unwind-tables",
 				);
 				OTHER_LDFLAGS = "-static";
-				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJepg;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJpeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -406,7 +406,7 @@
 					"-fno-asynchronous-unwind-tables",
 				);
 				OTHER_LDFLAGS = "-static";
-				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJepg;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vulgo.NoVPAJpeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = kext;
